@@ -1,7 +1,7 @@
 library(shiny)
 library(rstudioapi)
 
-# UI
+
 ui <- fluidPage(fluidRow(
     tags$head(
         tags$meta(name="viewport", content="width=device-width, initial-scale=1.0"),
@@ -62,13 +62,12 @@ ui <- fluidPage(fluidRow(
                 class = "decr",
                 "Visualize and preview different aspects of biodiversity data."
             ),
-            actionButton("action", label = "Under Development"),
+            actionButton("action", label = "Coming Soon"),
             img(src = '001.png', align = "center")
         )
     )
 ))
 
-# Server
 server <- function(input, output) {
     observeEvent(input$bddwc, {
         path_app <- system.file("scripts", 'bddwc.R', package = "bdverse")
